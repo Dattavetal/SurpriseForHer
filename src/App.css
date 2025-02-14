@@ -1,0 +1,361 @@
+body {
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  color: #333;
+  overflow: hidden;
+}
+
+/* Animated Background Hearts */
+@keyframes floatingHearts {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-50px) scale(1.2);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(-100px) scale(1.5);
+    opacity: 0;
+  }
+}
+
+.heart-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.heart {
+  position: absolute;
+  color: rgba(255, 0, 102, 0.8);
+  font-size: 24px;
+  animation: floatingHearts 4s linear infinite;
+}
+
+/* Random Placement of Hearts */
+.heart:nth-child(1) {
+  left: 10%;
+  animation-duration: 5s;
+}
+.heart:nth-child(2) {
+  left: 25%;
+  animation-duration: 6s;
+}
+.heart:nth-child(3) {
+  left: 40%;
+  animation-duration: 4.5s;
+}
+.heart:nth-child(4) {
+  left: 55%;
+  animation-duration: 5.5s;
+}
+.heart:nth-child(5) {
+  left: 70%;
+  animation-duration: 6.5s;
+}
+.heart:nth-child(6) {
+  left: 85%;
+  animation-duration: 4s;
+}
+
+/* Title */
+.title {
+  font-size: 28px;
+  font-weight: bold;
+  color: #ff3b77;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Subtitle */
+.subtitle {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 20px;
+  animation: fadeIn 1.8s ease-in-out;
+}
+
+/* Buttons */
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.btn {
+  border: none;
+  padding: 12px 18px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 25px;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-primary {
+  background: #ff3b77;
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #e02e65;
+  transform: scale(1.1);
+}
+
+.btn-secondary {
+  background: #8c52ff;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background: #7a3dff;
+  transform: scale(1.1);
+}
+
+/* Floating Hearts Animation */
+.floating-hearts::after {
+  content: "❤️ ❤️ 💕 💖 💞";
+  font-size: 20px;
+  position: absolute;
+  animation: floatHearts 3s infinite linear alternate;
+  left: 50%;
+  top: 10px;
+}
+
+@keyframes floatHearts {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-20px);
+  }
+}
+
+/* Page Containers */
+.container {
+  text-align: center;
+  padding: 50px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  max-width: 500px;
+  margin: auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+/* Responsive Grid for Page 2 & 3 */
+.second-page .reasons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.second-page .reason {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.second-page .reason:hover {
+  transform: scale(1.05);
+}
+
+.third-page .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.third-page .card-item {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.third-page .card-item:hover {
+  transform: scale(1.05);
+}
+
+.story-container {
+  background: linear-gradient(to bottom right, #ff758c, #ff7eb3);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  max-width: 800px;
+  margin: auto;
+  animation: fadeInUp 1.5s ease-in-out;
+}
+
+.story-title {
+  color: #fff;
+  font-size: 30px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.story-box {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin: 10px 0;
+  text-align: left;
+  transition: transform 0.3s ease-in-out;
+}
+
+.story-box:hover {
+  transform: translateY(-5px);
+}
+
+/* Songs Page */
+.songs-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.songs-title {
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.songs-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.song-card {
+  width: 280px;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  transition: transform 0.3s ease-in-out;
+}
+
+.song-card:hover {
+  transform: scale(1.05);
+}
+
+.play-button {
+  background: #ff8fa3;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.play-button:hover {
+  background: #ff577f;
+  transform: scale(1.1);
+}
+
+.footer-text {
+  margin-top: 20px;
+  font-size: 14px;
+  color: white;
+  font-weight: bold;
+}
+/* Songs Grid Layout */
+.fifth-page .songs-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two songs side by side */
+  gap: 15px;
+  margin-top: 15px;
+  text-align: center;
+}
+
+/* Individual Song Card */
+.fifth-page .song-card {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.fifth-page .song-card:hover {
+  transform: scale(1.05);
+}
+
+/* Song Title */
+.fifth-page .song-card h3 {
+  font-size: 18px;
+  color: #ff3b77;
+  margin-bottom: 5px;
+}
+
+/* Artist Name */
+.fifth-page .song-card p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+/* Responsive for Mobile (Stacked View) */
+@media (max-width: 768px) {
+  .fifth-page .songs-grid {
+    grid-template-columns: 1fr; /* Stack items in one column */
+  }
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
